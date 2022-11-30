@@ -51,9 +51,9 @@ class CountViewController: UIViewController {
                 self.timeS.text = String(self.totalSeconds) + " s"
                 
             } else {
+                timer.invalidate()
                 self.alarmSound()
                 self.popUpAlert()
-                
             }
         }
         
