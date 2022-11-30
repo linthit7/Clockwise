@@ -23,7 +23,7 @@ class CountViewController: UIViewController {
     }
     
     func popUpAlert() {
-        let alertView = UIAlertController(title: "Count Down Done!", message: nil, preferredStyle: .actionSheet)
+        let alertView = UIAlertController(title: "Time's up!", message: nil, preferredStyle: .actionSheet)
         
         let alertAction = UIAlertAction(title: "Done", style: .default) { _ in
             
@@ -68,6 +68,7 @@ class CountViewController: UIViewController {
         do {
             alarmFile = try AVAudioPlayer(contentsOf: url)
             alarmFile?.play()
+            alarmFile?.numberOfLoops = -1
         } catch {
             print(error)
         }
