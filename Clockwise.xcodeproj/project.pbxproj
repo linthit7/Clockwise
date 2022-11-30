@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F96F2FFF29371C1F00D69C77 /* Clockwise Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F96F2FFE29371C1F00D69C77 /* Clockwise Icon.png */; };
 		F97D4A842935E93C00D04A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97D4A832935E93C00D04A33 /* AppDelegate.swift */; };
 		F97D4A862935E93C00D04A33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97D4A852935E93C00D04A33 /* SceneDelegate.swift */; };
 		F97D4A882935E93C00D04A33 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97D4A872935E93C00D04A33 /* MainViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F96F2FFE29371C1F00D69C77 /* Clockwise Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clockwise Icon.png"; sourceTree = "<group>"; };
 		F97D4A802935E93C00D04A33 /* Clockwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clockwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97D4A832935E93C00D04A33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F97D4A852935E93C00D04A33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				F97D4A8C2935E93E00D04A33 /* Assets.xcassets */,
 				F97D4A912935E93E00D04A33 /* Info.plist */,
 				F97D4A9B2936392A00D04A33 /* mixkit-classic-alarm-995.wav */,
+				F96F2FFE29371C1F00D69C77 /* Clockwise Icon.png */,
 			);
 			path = Clockwise;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				F97D4A8D2935E93E00D04A33 /* Assets.xcassets in Resources */,
 				F97D4A8B2935E93C00D04A33 /* Main.storyboard in Resources */,
 				F97D4A9C2936392A00D04A33 /* mixkit-classic-alarm-995.wav in Resources */,
+				F96F2FFF29371C1F00D69C77 /* Clockwise Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
