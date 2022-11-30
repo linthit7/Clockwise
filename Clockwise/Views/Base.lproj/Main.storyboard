@@ -60,18 +60,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfo-Mh-gRX">
-                                <rect key="frame" x="195" y="393.66666666666669" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-5O-egd">
+                                <rect key="frame" x="161.33333333333334" y="316.33333333333331" width="67.333333333333343" height="154.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfo-Mh-gRX">
+                                        <rect key="frame" x="8.6666666666666572" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3E-v5-cai">
+                                        <rect key="frame" x="0.0" y="119.99999999999999" width="67.333333333333329" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Reset">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="HJk-fj-5HF" eventType="touchUpInside" id="Ptd-5d-ZpG"/>
+                                            <action selector="startCountDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUO-iK-b34"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lua-pd-cMJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zfo-Mh-gRX" firstAttribute="centerX" secondItem="Px1-FW-y97" secondAttribute="centerX" id="MkS-q2-an6"/>
-                            <constraint firstItem="zfo-Mh-gRX" firstAttribute="centerY" secondItem="Px1-FW-y97" secondAttribute="centerY" id="dFU-oy-jah"/>
+                            <constraint firstItem="Kt6-5O-egd" firstAttribute="centerX" secondItem="Px1-FW-y97" secondAttribute="centerX" id="3Cp-bY-KhW"/>
+                            <constraint firstItem="Kt6-5O-egd" firstAttribute="centerY" secondItem="Px1-FW-y97" secondAttribute="centerY" id="dEG-fC-mNq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rRz-8E-fzv"/>

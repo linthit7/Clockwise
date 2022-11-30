@@ -15,11 +15,17 @@ class CountViewController: UIViewController {
     var totalSeconds: Int?
     var alarmFile: AVAudioPlayer?
     
+    var timerObj: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timer()
+    }
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
         
+        timerStop()
     }
     
     func popUpAlert() {
@@ -38,7 +44,7 @@ class CountViewController: UIViewController {
     }
     
     func timer() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        timerObj = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             
             guard let timerTS = self.totalSeconds else {
                 print("Error getting totalSeconds.")
@@ -57,9 +63,14 @@ class CountViewController: UIViewController {
         
     }
     
+    func timerStop() {
+        self.timerObj?.invalidate()
+        self.dismiss(animated: true)
+    }
+    
     func timerDone() {
-            self.dismiss(animated: true)
-            self.alarmFile?.stop()
+        self.dismiss(animated: true)
+        self.alarmFile?.stop()
     }
     
     func alarmSound() {
