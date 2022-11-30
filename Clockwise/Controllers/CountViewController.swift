@@ -23,13 +23,6 @@ class CountViewController: UIViewController {
     }
     
     func popUpAlert() {
-        
-        guard let path = Bundle.main.path(forResource: "mixkit-classic-alarm-995.wav", ofType: nil) else {
-            print("Error getting audio file path.")
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        
         let alertView = UIAlertController(title: "Count Down Done!", message: nil, preferredStyle: .actionSheet)
         
         let alertAction = UIAlertAction(title: "Done", style: .default) { _ in
@@ -45,7 +38,7 @@ class CountViewController: UIViewController {
     }
     
     func timer() {
-        let _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             if self.totalSeconds > 0 {
                 self.totalSeconds = self.totalSeconds - 1
                 self.timeS.text = String(self.totalSeconds) + " s"
@@ -60,10 +53,8 @@ class CountViewController: UIViewController {
     }
     
     func timerDone() {
-        if totalSeconds == 0 {
             self.dismiss(animated: true)
             self.alarmFile?.stop()
-        }
     }
     
     func alarmSound() {
