@@ -12,7 +12,7 @@ class CountViewController: UIViewController {
     
     @IBOutlet weak var timeS: UILabel!
     
-    var totalSeconds: Int = 5
+    var totalSeconds: Int?
     var alarmFile: AVAudioPlayer?
     
     override func viewDidLoad() {
@@ -39,9 +39,14 @@ class CountViewController: UIViewController {
     
     func timer() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            if self.totalSeconds > 0 {
-                self.totalSeconds = self.totalSeconds - 1
-                self.timeS.text = String(self.totalSeconds) + " s"
+            
+            guard let timerTS = self.totalSeconds else {
+                print("Error getting totalSeconds.")
+                return
+            }
+            if timerTS > -1 {
+                self.totalSeconds = timerTS - 1
+                self.timeS.text = String(timerTS) + " s"
                 
             } else {
                 timer.invalidate()
